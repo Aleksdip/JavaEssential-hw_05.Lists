@@ -1,6 +1,7 @@
 package task_01.animals;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Zoo {
  ArrayList<Zoo> listZoo;
@@ -18,13 +19,17 @@ public class Zoo {
  public String toString() {
   return name;
  }
+//to delete an object by value, need to override the method equals and hashCode
+ @Override
+ public boolean equals(Object o) {
+  if (this == o) return true;
+  if (o == null || getClass() != o.getClass()) return false;
+  Zoo zoo = (Zoo) o;
+  return Objects.equals(listZoo, zoo.listZoo) && Objects.equals(name, zoo.name);
+ }
 
- public void printList() {
-  for (Zoo zoo : listZoo) {
-   System.out.println(zoo.toString());
-
-
-
-  }
+ @Override
+ public int hashCode() {
+  return Objects.hash(listZoo, name);
  }
 }

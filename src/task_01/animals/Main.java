@@ -1,7 +1,5 @@
 package task_01.animals;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -16,7 +14,24 @@ public class Main {
         zoo.listZoo.add(7,new Zoo("Turtle"));
 
 //        view listZoo
-        zoo.printList();
+        for (Zoo animal : zoo.listZoo) {
+            System.out.println(animal);
+        }
+
+
+        System.out.println("\nAfter change:");
+
+        zoo.listZoo.remove(new Zoo("Dog"));
+        zoo.listZoo.remove(new Zoo("Tiger"));
+        zoo.listZoo.remove(new Zoo("Lion"));
+
+        int size = zoo.listZoo.size();
+        System.out.println("\nРозмір оновленого списку : "+size);
+
+        for (Zoo animal : zoo.listZoo) {
+            System.out.println(animal);
+        }
+
 
 
 
