@@ -5,21 +5,17 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-//        Create list, add inside animals
-        ArrayList<Zoo> animals = new ArrayList<>();
-        animals.add(0,new Zoo("Wolf"));
-        animals.add(1,new Zoo("Cat"));
-        animals.add(2,new Zoo("Dog"));
-        animals.add(3,new Zoo("Giraffe"));
-        animals.add(4,new Zoo("Tiger"));
-        animals.add(5,new Zoo("Elephant"));
-        animals.add(6,new Zoo("Lion"));
-        animals.add(7,new Zoo("Turtle"));
+        Zoo zoo = new Zoo();
+        zoo.listZoo.add(0,new Zoo("Wolf"));
+        zoo.listZoo.add(1,new Zoo("Cat"));
+        zoo.listZoo.add(2,new Zoo("Dog"));
+        zoo.listZoo.add(3,new Zoo("Giraffe"));
+        zoo.listZoo.add(4,new Zoo("Tiger"));
+        zoo.listZoo.add(5,new Zoo("Elephant"));
+        zoo.listZoo.add(6,new Zoo("Lion"));
+        zoo.listZoo.add(7,new Zoo("Turtle"));
 
-//        Create a list of the class Zoo by passing animals
-        Zoo zoo = new Zoo(animals);
-
-//        void listZoo
+//        view listZoo
         zoo.printList();
 
 

@@ -10,8 +10,8 @@ public class Zoo {
   this.name = name;
  }
 
- public Zoo(ArrayList<Zoo> listAnimals) {
-  this.listZoo = listAnimals;
+ public Zoo() {
+  this.listZoo = new ArrayList<>();
  }
 
  @Override
@@ -20,8 +20,8 @@ public class Zoo {
  }
 
  public void printList() {
-  for (Zoo listAnimal : listZoo) {
-   System.out.println(listAnimal.toString());
+  for (Zoo zoo : listZoo) {
+   System.out.println(zoo.toString());
 
 
 
